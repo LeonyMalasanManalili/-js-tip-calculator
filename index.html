@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- favIcon -->
+    <link rel="shortcut icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
+    <!-- myCss -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- googleFonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>tipCalculatorJs</title>
+</head>
+
+<body>
+    <!-- CONTENITORE -->
+    <div class="container">
+            <!-- LOGO -->
+            <div class="logo">
+                <img src="./assets/images/logo.svg" alt="errorLogo">
+            </div>
+
+            <!-- CALCOLATRICE -->
+            <div class="calcolatrice">
+
+                    <!-- DIV SX -->
+                        <div class="sx">
+
+                            <p>Bill</p>
+                            <label for="people"><img src="./img/icon-dollar.svg"></label>
+                            <input id="bill" type="text" placeholder="0">
+                            
+                            
+                            <div class="tip-section">
+                              <p>Select Tip %</p>
+                              <div id="tip-container">
+                                <!-- Ci andranno le scelte proposte di tips in dinamico -->
+                                <input id="customTip" type="text" placeholder="Custom">
+                              </div>
+                            </div>
+                      
+                            <p>Number of People</p>
+                            <label for="people"><img src="./img/icon-person.svg"></label>
+                            <input id="people" type="text" placeholder="0">
+                          </div>
+
+                        </div>
+
+                    <!-- DIV DX -->
+                        <div class="dx">
+
+                            <div class="amount-container">
+                                <p>Tip Amount</p><span id="amount" class="price">$0.00</span>
+                            </div>
+
+                            <div class="amount-container">
+                                <p>Total</p><span id="total" class="price">$0.00</span>
+                            </div>
+
+                            <button id="reset" type="button" disabled>RESET</button>
+
+                        </div>
+
+            </div>
+    </div>
+
+</body>
+
+    <script src="main.js"></script>
+
+</html>
