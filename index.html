@@ -1,76 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-    <!-- favIcon -->
-    <link rel="shortcut icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
-    <!-- myCss -->
-    <link rel="stylesheet" href="CSS/style.css">
-    <!-- googleFonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./CSS/style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
 
-    <title>tipCalculatorJs</title>
 </head>
-
 <body>
-    <!-- CONTENITORE -->
-    <div class="container">
-            <!-- LOGO -->
-            <div class="logo">
-                <img src="./assets/images/logo.svg" alt="errorLogo">
-            </div>
 
-            <!-- CALCOLATRICE -->
-            <div class="calcolatrice">
+  <div class="logo">
+      <img src="./assets/images/logo.svg" alt="SPLITTER">
+  </div>
 
-                    <!-- DIV SX -->
-                        <div class="sx">
 
-                            <p>Bill</p>
-                            <label for="people"><img src="./img/icon-dollar.svg"></label>
-                            <input id="bill" type="text" placeholder="0">
-                            
-                            
-                            <div class="tip-section">
-                              <p>Select Tip %</p>
-                              <div id="tip-container">
-                                <!-- Ci andranno le scelte proposte di tips in dinamico -->
-                                <input id="customTip" type="text" placeholder="Custom">
-                              </div>
-                            </div>
-                      
-                            <p>Number of People</p>
-                            <label for="people"><img src="./img/icon-person.svg"></label>
-                            <input id="people" type="text" placeholder="0">
-                          </div>
+  <!-- Main Container -->
+  <div class="container">
 
-                        </div>
+    <div class="input-container">
+      <p>Bill</p>
+      <label for="people"><img src="./assets/images/icon-dollar.svg"></label>
+      <input id="bill" dir="rtl" type="text" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+      
+      
+      <div class="tip-box">
+        <p>Select Tip %</p>
+        <div id="tip-box">
+          <!-- Radiobutton -->
+          <input id="tip" class="custom-tip" dir="rtl" type="text" placeholder="Custom" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+        </div>
+      </div>
 
-                    <!-- DIV DX -->
-                        <div class="dx">
-
-                            <div class="amount-container">
-                                <p>Tip Amount</p><span id="amount" class="price">$0.00</span>
-                            </div>
-
-                            <div class="amount-container">
-                                <p>Total</p><span id="total" class="price">$0.00</span>
-                            </div>
-
-                            <button id="reset" type="button" disabled>RESET</button>
-
-                        </div>
-
-            </div>
+      <p>Number of People</p>
+      <label for="people"><img src="./assets/images/icon-person.svg"><span id="error" class="errorMsg">Can't be zero</span></label>
+      <input id="people" dir="rtl" type="text" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
     </div>
 
+    <div class="sub-container">
+      <div class="amount-container">
+        <p>Tip Amount</p><span id="amount" class="price">$0.00</span>
+      </div>
+      <div class="amount-container">
+        <p>Total</p><span id="total" class="price">$0.00</span>
+      </div>
+      <button id="reset" type="button" disabled>RESET</button>
+    </div>
+
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Leony M.Manalili</a>.
+  </div>
+
+  <script src="main.js"></script>
 </body>
-
-    <script src="main.js"></script>
-
 </html>
